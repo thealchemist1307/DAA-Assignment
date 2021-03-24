@@ -59,7 +59,7 @@ class Issues extends React.Component {
           >
             <h3>Contour Problem</h3>
             <h5>
-              <a href="https://thealchemist1307.github.io/contour-documentation/">
+              <a href="https://thealchemist1307.github.io/contour-documentation/documentation/html/">
                 Go to Documentation
               </a>
             </h5>

@@ -37,9 +37,9 @@ class StudentCard extends React.Component {
         <h1 style={{ textAlign: "center", color: "white" }}>
           {this.props.item.name}
         </h1>
-        <p style={{ color: "white", fontSize: "18px" }}>
+        {/* <p style={{ color: "white", fontSize: "18px" }}>
           Contribution: {this.props.item.workedOn}
-        </p>
+        </p> */}
       </div>
     );
   }

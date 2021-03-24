@@ -129,7 +129,21 @@ class Result extends React.Component {
             marginLeft: "10px"
           }}
         >
-          <h1 style={{ textAlign: "center" }}>Result of our Code</h1>
+          <h1 style={{ textAlign: "center", marginTop: 10 }}>
+            Result of our Code
+          </h1>
+          <h3 style={{ textAlign: "center", marginTop: 5 }}>
+            Blue colour has been used to represent the frame enclosing all the
+            input rectangles
+          </h3>
+          <h3 style={{ textAlign: "center", marginTop: 5 }}>
+            Green colour has been used to represent the union of the input
+            rectangles
+          </h3>
+          <h3 style={{ textAlign: "center", marginTop: 5 }}>
+            Red coloured lines are used to represent the Contour lines for the
+            union of the input rectangles
+          </h3>
           <div class="row">
             <div
               class="col-2"

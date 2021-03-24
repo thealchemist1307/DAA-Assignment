@@ -218,14 +218,31 @@ class Document extends React.Component {
                 Additional Subroutine for Contour problem:-
               </h2>
               <h5>
-                <span style={{ fontWeight: "bold" }}>contour() - O(n) -</span>
-                iterates through all the stripes and computes the total measure{" "}
+                <span style={{ fontWeight: "bold" }}>
+                  contour() - O(n^2) -{" "}
+                </span>
+                iterates through all the horizontal edges and for each edge and
+                the set of stripes calls contour_pieces (O(n)) to get a set of
+                line segments, each of which is used to generate the horizontal
+                contours (O(n)).
+              </h5>
+
+              <h5>
+                <span style={{ fontWeight: "bold" }}>
+                  contour_pieces() - O(n) -
+                </span>
+                There are multiple O(n) operations (iterate through all stripes,
+                ctree nodes, set of intervals J) along with a call to
+                inorder_find() which takes O(logn) time, but all of them occur
+                in parallel and hence overall complexity is O(n)
               </h5>
               <h5>
                 <span style={{ fontWeight: "bold" }}>
-                  contour_pieces() - O() -{" "}
+                  inorder_find() - O(logn) -
                 </span>
-                measure{" "}
+                It is a recursive function with the recurrence relation given by
+                T(n) = 2T(n/2) + O(1). The solution to this recurrence relation
+                is T(n) = O(logn).
               </h5>
             </div>
             <div
@@ -242,8 +259,8 @@ class Document extends React.Component {
                 = Taking input from user + findFrame() + rectangle_DAC() +
                 contour()
               </h5>
-              <h5>= O(n) + O(n) + O(n*logn*logn) + O(n))</h5>
-              <h5>= O(n*logn*logn)</h5>
+              <h5>= O(n) + O(n) + O(n*logn*logn) + O(n^2)</h5>
+              <h5>= O(n^2)</h5>
             </div>
           </div>
         </div>
